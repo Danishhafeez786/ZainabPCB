@@ -15,7 +15,7 @@ const faqData = [
     id: 3,
     question: "Is the training practical or theoretical?",
     answer:
-      "More than 90% of the course is practical. Students work on real Hybrid Inverter and Inverter AC PCBs using professional repair equipment.",
+      "More than 60% of the course is practical. Students work on real Hybrid Inverter and Inverter AC PCBs using professional repair equipment.",
   },
   {
     id: 4,
