@@ -13,7 +13,7 @@ import CTASection from "../components/home/CTASection";
 
 export default function Home() {
   return (
-    <div className="py-20 text-center text-4xl font-bold">
+    <div className="pb-20 text-center text-4xl font-bold">
       <FeaturedCourses />
       <GalleryPreview />
       <HeroSection />
