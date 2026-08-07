@@ -27,7 +27,7 @@ const heroData = {
 
   features: [
     {
-      title: "90% Practical Training",
+      title: "60% Practical Training",
       icon: "practical",
     },
     {
@@ -54,7 +54,7 @@ const heroData = {
 
   statistics: [
     {
-      value: "500+",
+      value: "50+",
       label: "Students Trained",
     },
     {
@@ -62,7 +62,7 @@ const heroData = {
       label: "PCB Repairs",
     },
     {
-      value: "90%",
+      value: "60%",
       label: "Practical Learning",
     },
     {

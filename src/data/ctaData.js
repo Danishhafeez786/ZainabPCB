@@ -13,7 +13,7 @@ const ctaData = {
   location: "Lahore, Pakistan",
 
   features: [
-    "90% Practical Training",
+    "60% Practical Training",
     "Live Customer PCB Repair",
     "Certificate Included",
     "Lifetime Technical Support",

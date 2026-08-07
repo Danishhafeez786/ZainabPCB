@@ -5,7 +5,7 @@ import Container from "../common/Container";
 
 const FeaturedCourses = () => {
   return (
-    <section className="py-24">
+    <section className="pb-24">
     <Container>
 
         {/* Heading */}

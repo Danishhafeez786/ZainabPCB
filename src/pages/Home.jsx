@@ -14,14 +14,14 @@ import CTASection from "../components/home/CTASection";
 export default function Home() {
   return (
     <div className="py-20 text-center text-4xl font-bold">
+      <FeaturedCourses />
+      <GalleryPreview />
       <HeroSection />
       <StatisticsSection />
       <AboutSection />
-      <FeaturedCourses />
       <WhyChooseSection />
       <TrainingProcess />
       <RepairServices />
-      <GalleryPreview />
       <StudentFeedback />
       <FAQSection />
       <CTASection />
