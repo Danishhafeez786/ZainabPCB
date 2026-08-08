@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import galleryData from "../../data/galleryData";
 import Container from "../common/Container";
+import SectionHeading from "../common/SectionHeading";
 
 const GalleryPreview = () => {
   return (
@@ -12,18 +13,12 @@ const GalleryPreview = () => {
 
         <div className="mx-auto mb-16 max-w-3xl text-center">
 
-          <span className="rounded-full bg-blue-100 px-5 py-2 text-sm font-semibold text-blue-700">
-            Gallery
-          </span>
-
-          <h2 className="mt-6 text-4xl font-bold text-slate-900">
-            Explore Our Training & Repair Laboratory
-          </h2>
-
-          <p className="mt-5 text-lg leading-8 text-slate-600">
-            See our practical training sessions, repair laboratory,
-            professional equipment, and successful students.
-          </p>
+          <SectionHeading
+            badge="Gallery"
+            title=" Explore Our Training & Repair Laboratory"
+            description=" See our practical training sessions, repair laboratory,
+            professional equipment, and successful students."
+          />
 
         </div>
 
