@@ -10,7 +10,7 @@ const aboutData = {
     "Whether you are a beginner, technician, electrician, engineer, or business owner, our professional training helps you become a confident PCB repair expert and prepares you for a successful technical career.",
 
   features: [
-    "90% Practical Hands-on Training",
+    "60% Practical Hands-on Training",
     "Live Customer PCB Repair",
     "Component Level Repair",
     "Professional Test Equipment",

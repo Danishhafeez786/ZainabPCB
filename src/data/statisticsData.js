@@ -1,7 +1,7 @@
 const statisticsData = [
   {
     id: 1,
-    number: 50,
+    number: 100,
     suffix: "+",
     title: "Students Trained",
     description:

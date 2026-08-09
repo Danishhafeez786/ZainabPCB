@@ -10,7 +10,7 @@ import {
   Zap,
   ShieldCheck,
 } from "lucide-react";
-import HybridSolarInverterRepairTraining from "../assets/images/courses/HybridSolarInverterRepairTraining.jpeg";
+import HybridSolarInverterRepairTraining from "../assets/images/courses/hybrid-course.jpeg";
 import InverterRepairTraining from "../assets/images/courses/InverterACPCBRepairingTraining.jpeg";
 
 import { Link } from "react-router-dom";
@@ -421,7 +421,7 @@ const Services = () => {
                 src={HybridSolarInverterRepairTraining}
                 alt="PCB repair laboratory"
                 loading="lazy"
-                className="h-[500px] w-full object-cover"
+                className="h-125 w-full object-cover"
               />
 
             </div>

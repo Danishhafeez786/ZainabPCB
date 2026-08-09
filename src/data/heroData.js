@@ -54,7 +54,7 @@ const heroData = {
 
   statistics: [
     {
-      value: "50+",
+      value: "100+",
       label: "Students Trained",
     },
     {
@@ -66,7 +66,7 @@ const heroData = {
       label: "Practical Learning",
     },
     {
-      value: "24/7",
+      value: "9 AM - 9 PM",
       label: "Technical Support",
     },
   ],

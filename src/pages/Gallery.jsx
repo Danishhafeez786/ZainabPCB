@@ -149,7 +149,7 @@ const Gallery = () => {
           >
 
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-
+              {console.log(filteredImages)}
               {filteredImages.map((item, index) => (
 
                 <PhotoView
@@ -171,14 +171,14 @@ const Gallery = () => {
                       loading={index < 3 ? "eager" : "lazy"}
                       className={`w-full object-cover transition duration-700 group-hover:scale-110 ${
                         index === 0
-                          ? "h-[520px]"
-                          : "h-[320px]"
+                          ? "h-130"
+                          : "h-80"
                       }`}
                     />
 
                     {/* Dark Overlay */}
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/10 to-transparent opacity-80 transition duration-300 group-hover:opacity-100" />
+                    <div className="absolute inset-0 bg-linear-to-t from-slate-950/85 via-slate-950/10 to-transparent opacity-80 transition duration-300 group-hover:opacity-100" />
 
                     {/* Category */}
 
