@@ -23,25 +23,34 @@ const Navbar = () => {
       ? "text-blue-700 font-semibold"
       : "text-gray-700 hover:text-blue-700 transition";
 
+  const closeMenus = () => {
+    setMobileMenu(false);
+    setCourseMenu(false);
+  };
+
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${
         isScrolled
           ? "bg-white shadow-lg"
           : "bg-white/90 backdrop-blur-md"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-5 lg:px-8">
-        <div className="h-20 flex items-center justify-between">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <div className="flex h-20 items-center justify-between">
 
-          {/* <img src={Logo} alt="Logo" className="h-3 w-3" /> */}
+          {/* Logo */}
 
           <NavLink
             to="/"
             className="flex items-center gap-3"
           >
-            <div className="w-12 h-12 rounded-full bg-blue-700 text-white flex items-center justify-center font-bold text-xl">
-              <img src={Logo} alt="" className="h-8 w-8" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 text-xl font-bold text-white">
+              <img
+                src={Logo}
+                alt="Zainab PCB"
+                className="h-11 w-11"
+              />
             </div>
 
             <div>
@@ -56,10 +65,10 @@ const Navbar = () => {
           </NavLink>
 
           {/* ===========================
-                Desktop Menu
+              Desktop Menu
           ============================ */}
 
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden items-center gap-8 lg:flex">
 
             <NavLink to="/" className={navClass}>
               Home
@@ -69,31 +78,57 @@ const Navbar = () => {
               About
             </NavLink>
 
-            {/* Dropdown */}
+            {/* ===========================
+                Courses Dropdown
+            ============================ */}
 
             <div
-              className="relative"
+              className="relative py-6"
               onMouseEnter={() => setCourseMenu(true)}
               onMouseLeave={() => setCourseMenu(false)}
             >
-              <button className="flex items-center gap-1 text-gray-700 hover:text-blue-700 transition">
+              <button
+                type="button"
+                onClick={() => setCourseMenu(!courseMenu)}
+                className="flex items-center gap-1 text-gray-700 transition hover:text-blue-700"
+              >
                 Courses
-                <ChevronDown size={18} />
+
+                <ChevronDown
+                  size={18}
+                  className={`transition-transform duration-300 ${
+                    courseMenu ? "rotate-180" : ""
+                  }`}
+                />
               </button>
 
               {courseMenu && (
-                <div className="absolute top-full left-0 mt-3 w-64 bg-white rounded-xl shadow-xl overflow-hidden border">
+                <div className="absolute left-0 top-full w-72 overflow-hidden rounded-2xl border border-gray-200 bg-white py-2 shadow-xl">
 
                   <NavLink
                     to="/courses/hybrid"
-                    className="block px-5 py-3 hover:bg-blue-50"
+                    onClick={closeMenus}
+                    className={({ isActive }) =>
+                      `block px-6 py-4 transition ${
+                        isActive
+                          ? "bg-blue-50 font-semibold text-blue-700"
+                          : "text-gray-700 hover:bg-blue-50 hover:text-blue-700"
+                      }`
+                    }
                   >
                     Hybrid Inverter Repair
                   </NavLink>
 
                   <NavLink
                     to="/courses/ac-pcb"
-                    className="block px-5 py-3 hover:bg-blue-50"
+                    onClick={closeMenus}
+                    className={({ isActive }) =>
+                      `block px-6 py-4 transition ${
+                        isActive
+                          ? "bg-blue-50 font-semibold text-blue-700"
+                          : "text-gray-700 hover:bg-blue-50 hover:text-blue-700"
+                      }`
+                    }
                   >
                     Inverter AC PCB Repair
                   </NavLink>
@@ -121,14 +156,14 @@ const Navbar = () => {
           </nav>
 
           {/* ===========================
-                Right Button
+              Right Button
           ============================ */}
 
           <div className="hidden lg:block">
 
             <a
               href="tel:03320967847"
-              className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-full font-semibold transition duration-300 shadow-lg"
+              className="rounded-full bg-blue-700 px-6 py-3 font-semibold text-white shadow-lg transition duration-300 hover:bg-blue-800"
             >
               Enroll Now
             </a>
@@ -136,12 +171,13 @@ const Navbar = () => {
           </div>
 
           {/* ===========================
-                Mobile Button
+              Mobile Button
           ============================ */}
 
           <button
             className="lg:hidden"
             onClick={() => setMobileMenu(!mobileMenu)}
+            aria-label="Toggle navigation menu"
           >
             {mobileMenu ? (
               <X size={30} />
@@ -154,18 +190,18 @@ const Navbar = () => {
       </div>
 
       {/* ===========================
-            Mobile Menu
+          Mobile Menu
       ============================ */}
 
       {mobileMenu && (
-        <div className="lg:hidden bg-white border-t">
+        <div className="border-t bg-white lg:hidden">
 
-          <div className="px-6 py-5 flex flex-col">
+          <div className="flex flex-col px-6 py-5">
 
             <NavLink
               to="/"
               className="py-3"
-              onClick={() => setMobileMenu(false)}
+              onClick={closeMenus}
             >
               Home
             </NavLink>
@@ -173,7 +209,7 @@ const Navbar = () => {
             <NavLink
               to="/about"
               className="py-3"
-              onClick={() => setMobileMenu(false)}
+              onClick={closeMenus}
             >
               About
             </NavLink>
@@ -181,7 +217,7 @@ const Navbar = () => {
             <NavLink
               to="/courses/hybrid"
               className="py-3"
-              onClick={() => setMobileMenu(false)}
+              onClick={closeMenus}
             >
               Hybrid Inverter Course
             </NavLink>
@@ -189,7 +225,7 @@ const Navbar = () => {
             <NavLink
               to="/courses/ac-pcb"
               className="py-3"
-              onClick={() => setMobileMenu(false)}
+              onClick={closeMenus}
             >
               Inverter AC PCB Course
             </NavLink>
@@ -197,7 +233,7 @@ const Navbar = () => {
             <NavLink
               to="/services"
               className="py-3"
-              onClick={() => setMobileMenu(false)}
+              onClick={closeMenus}
             >
               Services
             </NavLink>
@@ -205,7 +241,7 @@ const Navbar = () => {
             <NavLink
               to="/gallery"
               className="py-3"
-              onClick={() => setMobileMenu(false)}
+              onClick={closeMenus}
             >
               Gallery
             </NavLink>
@@ -213,7 +249,7 @@ const Navbar = () => {
             <NavLink
               to="/feedback"
               className="py-3"
-              onClick={() => setMobileMenu(false)}
+              onClick={closeMenus}
             >
               Feedback
             </NavLink>
@@ -221,14 +257,14 @@ const Navbar = () => {
             <NavLink
               to="/contact"
               className="py-3"
-              onClick={() => setMobileMenu(false)}
+              onClick={closeMenus}
             >
               Contact
             </NavLink>
 
             <a
               href="tel:03320967847"
-              className="mt-5 bg-blue-700 text-white py-3 rounded-xl text-center font-semibold"
+              className="mt-5 rounded-xl bg-blue-700 py-3 text-center font-semibold text-white"
             >
               Enroll Now
             </a>
@@ -237,6 +273,7 @@ const Navbar = () => {
 
         </div>
       )}
+
     </header>
   );
 };

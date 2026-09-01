@@ -27,7 +27,7 @@ const heroData = {
 
   features: [
     {
-      title: "60% Practical Training",
+      title: "70% Practical Training",
       icon: "practical",
     },
     {
@@ -62,7 +62,7 @@ const heroData = {
       label: "PCB Repairs",
     },
     {
-      value: "60%",
+      value: "70%",
       label: "Practical Learning",
     },
     {

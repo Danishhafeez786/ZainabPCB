@@ -16,7 +16,7 @@ const coursesData = [
       "Learn complete Hybrid Single Phase Inverter PCB Repair with practical hands-on training, real customer fault diagnosis, oscilloscope testing, and component-level PCB repairing.",
 
     features: [
-      "60% Practical Training",
+      "70% Practical Training",
       "Live Customer PCB Repair",
       "Oscilloscope Training",
       "Certificate Included",
@@ -24,7 +24,7 @@ const coursesData = [
 
     button: "View Course",
 
-    link: "/courses/hybrid-inverter",
+    link: "/courses/hybrid",
   },
 
   {
@@ -50,7 +50,7 @@ const coursesData = [
 
     button: "View Course",
 
-    link: "/courses/inverter-ac",
+    link: "/courses/ac-pcb",
   },
 ];
 

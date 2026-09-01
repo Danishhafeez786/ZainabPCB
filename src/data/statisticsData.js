@@ -19,7 +19,7 @@ const statisticsData = [
 
   {
     id: 3,
-    number: 60,
+    number: 70,
     suffix: "%",
     title: "Practical Training",
     description:

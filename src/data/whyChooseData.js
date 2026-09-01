@@ -12,7 +12,7 @@ import {
 const whyChooseData = [
   {
     id: 1,
-    title: "60% Practical Training",
+    title: "70% Practical Training",
     description:
       "Hands-on learning using real Hybrid Inverter and Inverter AC PCBs.",
     icon: GraduationCap,

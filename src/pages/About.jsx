@@ -96,7 +96,7 @@ const About = () => {
             <div className="absolute -bottom-7 -right-4 rounded-2xl bg-blue-700 p-6 text-white shadow-xl sm:right-6">
 
               <p className="text-3xl font-bold">
-                60%
+                70%
               </p>
 
               <p className="mt-1 text-sm text-blue-100">
